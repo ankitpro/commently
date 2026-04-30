@@ -12,11 +12,11 @@ A Chrome extension that uses AI to generate professional LinkedIn comments. Supp
 
 ## Features
 
-✨ **AI-Powered Comments** - Generate engaging LinkedIn comments with one click
-🤖 **Local LLM Support** - Use open-source models like Llama 2, Mistral, or Dolphin
-🔐 **API Key Management** - Securely store API keys for OpenAI and other providers
-⚡ **Easy Toggle** - Enable/disable the extension from the popup
-🎨 **Clean UI** - Modern, intuitive interface for settings and generation
+- ✨ **AI-Powered Comments** - Generate engaging LinkedIn comments with one click
+- 🤖 **Local LLM Support** - Use open-source models like Llama 2, Mistral, or Dolphin
+- 🔐 **API Key Management** - Securely store API keys for OpenAI and other providers
+- ⚡ **Easy Toggle** - Enable/disable the extension from the popup
+- 🎨 **Clean UI** - Modern, intuitive interface for settings and generation
 
 ## Prerequisites
 
@@ -158,15 +158,15 @@ Creates a `.crx` file ready for distribution.
 
 ## Testing Checklist
 
-- [ ] Settings page loads and saves configuration
-- [ ] API mode works with valid OpenAI key
-- [ ] Local LLM mode connects to endpoint
-- [ ] Extension button appears in LinkedIn comment boxes
-- [ ] Comment generation works on sample posts
-- [ ] Enable/disable toggle works
-- [ ] Generated comments are reasonable quality
-- [ ] Error handling for missing API keys
-- [ ] Error handling for unreachable endpoints
+- [x] Settings page loads and saves configuration
+- [x] API mode works with valid OpenAI key
+- [x] Local LLM mode connects to endpoint
+- [x] Extension button appears in LinkedIn comment boxes
+- [x] Comment generation works on sample posts
+- [x] Enable/disable toggle works
+- [x] Generated comments are reasonable quality
+- [x] Error handling for missing API keys
+- [x] Error handling for unreachable endpoints
 
 ## Troubleshooting
 
@@ -259,9 +259,9 @@ Response:
 - [ ] Multiple API provider support (Anthropic, Cohere, HuggingFace)
 - [ ] Comment history and favorites
 - [ ] Tone/style customization UI
-- [ ] Batch comment generation
-- [ ] Integration with other platforms
-- [ ] User-defined system prompts
+- [x] Batch comment generation
+- [x] Integration with other platforms
+- [x] User-defined system prompts
 - [ ] Rate limiting and usage tracking
 
 ## License
