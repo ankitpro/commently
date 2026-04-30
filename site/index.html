@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commently — AI Comment Generator for LinkedIn</title>
+  <meta name="description" content="Free, open-source Chrome extension that generates professional LinkedIn comments using AI. Supports OpenAI API and local LLMs (Ollama)." />
+  <meta property="og:title" content="Commently — AI Comment Generator for LinkedIn" />
+  <meta property="og:description" content="Generate professional, tone-aware LinkedIn comments in seconds. Free, open-source, works with OpenAI or local LLMs." />
+  <meta property="og:url" content="https://ankitpro.github.io/commently/" />
+  <meta property="og:image" content="https://ankitpro.github.io/commently/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://ankitpro.github.io/commently/og-image.png" />
+  <meta name="theme-color" content="#0a66c2" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ── Header ──────────────────────────────────────────────────────────────── -->
+<header class="site-header">
+  <a href="#" class="header-logo">
+    <img src="favicon.png" alt="Commently" width="28" height="28" style="border-radius:6px;" />
+    <span>Commently</span>
+  </a>
+  <nav class="header-nav">
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#providers">AI Providers</a>
+    <a href="#tones">Tones</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://github.com/ankitpro/commently" target="_blank" rel="noreferrer">GitHub</a>
+    <a href="docs/installation.html" class="header-cta">Get Started →</a>
+  </nav>
+</header>
+
+<!-- ── Hero ────────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div>
+    <div style="margin-bottom:28px;">
+      <img src="logo.png" alt="Commently — AI-Powered LinkedIn Comments" style="height:72px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,.12);" />
+    </div>
+    <div class="hero-badge">⚡ Powered by AgentCoreX · Free &amp; Open Source</div>
+    <h1>Generate <span class="highlight">AI-powered</span><br>LinkedIn comments instantly</h1>
+    <p>Pick a tone, click generate, and get a ready-to-post comment in seconds.
+       Works with OpenAI or your own local LLM — no data leaves your machine.</p>
+    <div class="hero-actions">
+      <a href="https://github.com/ankitpro/commently" class="btn-primary" target="_blank" rel="noreferrer">
+        ⬇️ Install from GitHub
+      </a>
+      <a href="docs/installation.html" class="btn-secondary">
+        📖 Read the Docs
+      </a>
+    </div>
+
+    <!-- Video placeholder -->
+    <div class="hero-video-placeholder">
+      <div class="play-icon">▶️</div>
+      <p>Demo video coming soon</p>
+      <small>Watch Commently generate a comment in under 5 seconds</small>
+    </div>
+  </div>
+</section>
+
+<!-- ── Features ─────────────────────────────────────────────────────────────── -->
+<section id="features" style="background: var(--bg-alt);">
+  <div class="section-inner">
+    <div class="section-label">Features</div>
+    <h2 class="section-title">Everything you need for better LinkedIn engagement</h2>
+    <p class="section-sub">Commently handles the hard part — you just review and post.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎭</div>
+        <h3>24 Preset Tones</h3>
+        <p>Professional, Casual, Inspirational, Analytical, Humorous, and 19 more. Pick the right vibe for every post.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✏️</div>
+        <h3>Custom Tones</h3>
+        <p>Create your own tone with a custom prompt. "Thought Leader", "Empowering Coach" — anything you need.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>Local LLM Support</h3>
+        <p>Run Ollama, LM Studio, or oobabooga on your machine. Zero data sent externally. Full privacy.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔑</div>
+        <h3>OpenAI Integration</h3>
+        <p>Connect your OpenAI key and choose from GPT-4o, GPT-4, or GPT-3.5-turbo with a model dropdown.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Instant Generation</h3>
+        <p>The AI reads the post text and generates a relevant, on-topic comment — no copy-pasting needed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Secure Storage</h3>
+        <p>API keys are stored in Chrome's encrypted storage and synced across your devices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How It Works ──────────────────────────────────────────────────────────── -->
+<section id="how-it-works">
+  <div class="section-inner">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">From zero to posted comment in 3 steps</h2>
+    <p class="section-sub">No complicated setup. Just install, configure your AI, and start commenting.</p>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Install &amp; Configure</h3>
+            <p>Load the extension in Chrome, then set up your AI provider — OpenAI API key or a local Ollama endpoint.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Open a LinkedIn Post</h3>
+            <p>Click the comment box under any post. The tone selector and generate button appear automatically.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Pick Tone &amp; Generate</h3>
+            <p>Select a tone from the pill bar, click <strong>💬 Generate with Commently</strong>, and your comment is ready.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+            <h3>Review &amp; Post</h3>
+            <p>The comment is inserted into the box. Edit if needed, then hit Post — done.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="screenshot-placeholder">
+          <div class="ph-icon">📸</div>
+          <p><strong>Screenshot coming soon</strong></p>
+          <small>Commently UI on a real LinkedIn post</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AI Providers ──────────────────────────────────────────────────────────── -->
+<section id="providers" style="background: var(--bg-alt);">
+  <div class="section-inner">
+    <div class="section-label">AI Providers</div>
+    <h2 class="section-title">Use the cloud or run it locally</h2>
+    <p class="section-sub">Commently works with any provider — pick what suits you.</p>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('openai')">☁️ OpenAI API</button>
+      <button class="tab-btn" onclick="switchTab('local')">🖥️ Local LLM</button>
+    </div>
+
+    <div id="tab-openai" class="tab-panel active">
+      <div class="providers-grid">
+        <div class="provider-card">
+          <div class="provider-badge">Recommended</div>
+          <h3>GPT-4o</h3>
+          <p>Fastest flagship model. Excellent comment quality with low latency.</p>
+          <code>gpt-4o</code>
+        </div>
+        <div class="provider-card">
+          <div class="provider-badge">Best Quality</div>
+          <h3>GPT-4</h3>
+          <p>Highest quality reasoning. Ideal when tone precision matters most.</p>
+          <code>gpt-4</code>
+        </div>
+        <div class="provider-card">
+          <div class="provider-badge">Budget</div>
+          <h3>GPT-3.5 Turbo</h3>
+          <p>Very fast and low cost. Great for high-volume comment generation.</p>
+          <code>gpt-3.5-turbo</code>
+        </div>
+      </div>
+      <div style="margin-top:20px;">
+        <pre><code># Settings → Use API (OpenAI)
+# Enter your key → click Fetch Models → select model → Save</code></pre>
+        <p style="font-size:14px;color:var(--text-muted);margin-top:10px;">
+          Get an API key at <a href="https://platform.openai.com/api-keys" target="_blank" rel="noreferrer">platform.openai.com/api-keys</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="tab-local" class="tab-panel">
+      <div class="providers-grid">
+        <div class="provider-card">
+          <div class="provider-badge">Recommended</div>
+          <h3>Ollama</h3>
+          <p>Easiest local LLM. Supports Mistral, Llama2, Neural-Chat, and more.</p>
+          <code>localhost:11434</code>
+        </div>
+        <div class="provider-card">
+          <div class="provider-badge">GUI</div>
+          <h3>LM Studio</h3>
+          <p>User-friendly desktop app. Download models and start a server in clicks.</p>
+          <code>localhost:1234</code>
+        </div>
+        <div class="provider-card">
+          <div class="provider-badge">Advanced</div>
+          <h3>oobabooga</h3>
+          <p>Most feature-rich option. Full control over generation parameters.</p>
+          <code>localhost:5000</code>
+        </div>
+      </div>
+      <pre style="margin-top:20px;"><code># Install Ollama and pull a model
+ollama pull mistral
+
+# Start with CORS enabled (required for Chrome extensions)
+OLLAMA_ORIGINS=* ollama serve</code></pre>
+      <p style="font-size:14px;color:var(--text-muted);margin-top:10px;">
+        <a href="docs/local-llm.html">Full local LLM setup guide →</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Tones ─────────────────────────────────────────────────────────────────── -->
+<section id="tones">
+  <div class="section-inner">
+    <div class="section-label">Tones</div>
+    <h2 class="section-title">24 tones for every situation</h2>
+    <p class="section-sub">Select a tone in Settings as your default, or change it per-comment on LinkedIn.</p>
+
+    <div class="tones-grid">
+      <div class="tone-pill">👔 Professional</div>
+      <div class="tone-pill">😊 Casual</div>
+      <div class="tone-pill">✨ Inspirational</div>
+      <div class="tone-pill">😂 Humorous</div>
+      <div class="tone-pill">🤗 Empathetic</div>
+      <div class="tone-pill">📚 Informative</div>
+      <div class="tone-pill">🧐 Critical</div>
+      <div class="tone-pill">📊 Analytical</div>
+      <div class="tone-pill">🎉 Enthusiastic</div>
+      <div class="tone-pill">🗣️ Persuasive</div>
+      <div class="tone-pill">💭 Reflective</div>
+      <div class="tone-pill">🙂 Friendly</div>
+      <div class="tone-pill">🌞 Optimistic</div>
+      <div class="tone-pill">🌧️ Pessimistic</div>
+      <div class="tone-pill">⚖️ Neutral</div>
+      <div class="tone-pill">🛡️ Authoritative</div>
+      <div class="tone-pill">🤝 Conciliatory</div>
+      <div class="tone-pill">❓ Questioning</div>
+      <div class="tone-pill">📖 Narrative</div>
+      <div class="tone-pill">👍 Supportive</div>
+      <div class="tone-pill">🚧 Cautious</div>
+      <div class="tone-pill">🌟 Visionary</div>
+      <div class="tone-pill">🤔 Disagreement</div>
+      <div class="tone-pill">✅ Agreement</div>
+    </div>
+
+    <div style="margin-top:32px; padding:24px; background:var(--brand-light); border-radius:var(--radius);">
+      <strong>✏️ Custom Tones</strong> — Create your own tone with a name, icon, and custom AI prompt.
+      Perfect for "Thought Leader", "Empowering Coach", or any style you need.
+      <a href="docs/tones.html" style="margin-left:8px;">Learn more →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Screenshots ───────────────────────────────────────────────────────────── -->
+<section style="background:var(--bg-alt);">
+  <div class="section-inner">
+    <div class="section-label">Screenshots</div>
+    <h2 class="section-title">See Commently in action</h2>
+    <p class="section-sub">Screenshots and walkthrough videos coming soon.</p>
+
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:20px;">
+      <div class="screenshot-placeholder">
+        <div class="ph-icon">🖥️</div>
+        <p><strong>Extension Popup</strong></p>
+        <small>Status, quick toggle, and settings access</small>
+      </div>
+      <div class="screenshot-placeholder">
+        <div class="ph-icon">⚙️</div>
+        <p><strong>Settings Page</strong></p>
+        <small>API key setup, model selection, tone management</small>
+      </div>
+      <div class="screenshot-placeholder">
+        <div class="ph-icon">💬</div>
+        <p><strong>LinkedIn Comment Box</strong></p>
+        <small>Tone bar and generate button injected inline</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ───────────────────────────────────────────────────────────────────── -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Frequently asked questions</h2>
+
+    <div class="faq">
+      <details>
+        <summary>Is Commently free?</summary>
+        <div class="faq-body">Yes — Commently is completely free for personal and non-commercial use.
+        You only pay for the AI service you connect (e.g. OpenAI API usage). Running a local LLM has no cost at all.</div>
+      </details>
+      <details>
+        <summary>Does it store my LinkedIn data?</summary>
+        <div class="faq-body">No. Commently only reads the post text from the page you're currently viewing
+        and sends it to your chosen AI provider (OpenAI or your local LLM). Nothing is stored on any server.
+        In local LLM mode, nothing leaves your machine.</div>
+      </details>
+      <details>
+        <summary>Why isn't the generate button appearing?</summary>
+        <div class="faq-body">Check that Commently is enabled (click the toolbar icon — status should show ✅ Ready).
+        Refresh the LinkedIn page. Make sure you clicked inside the comment text box, not just near it.
+        If it still doesn't appear, check the browser console (F12) for errors.</div>
+      </details>
+      <details>
+        <summary>Can I use it without an OpenAI key?</summary>
+        <div class="faq-body">Yes! Set it to <strong>Local LLM</strong> mode and connect Ollama or LM Studio.
+        No API key needed. See the <a href="docs/local-llm.html">local LLM guide</a> for setup instructions.</div>
+      </details>
+      <details>
+        <summary>The comment has preamble like "Here's a comment:"</summary>
+        <div class="faq-body">Commently automatically strips preamble lines from the AI's response.
+        If it still appears, try a different model — instruction-tuned models (e.g. <code>mistral</code>)
+        are much better at following the "output only the comment" instruction.</div>
+      </details>
+      <details>
+        <summary>Can I use Commently commercially?</summary>
+        <div class="faq-body">Commercial use (monetising, white-labelling, selling the extension) requires written
+        permission from AgentCoreX. Contact <a href="mailto:agentcorex26@gmail.com">agentcorex26@gmail.com</a>
+        to discuss a commercial license.</div>
+      </details>
+      <details>
+        <summary>How do I contribute?</summary>
+        <div class="faq-body">Fork the repo on GitHub, make your changes, and open a pull request.
+        See <a href="docs/contributing.html">CONTRIBUTING</a> for full details.
+        We welcome bug fixes, new LLM providers, tone improvements, and UI enhancements.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ───────────────────────────────────────────────────────────────────── -->
+<section>
+  <div class="section-inner">
+    <div class="cta-banner">
+      <h2>Start commenting smarter today</h2>
+      <p>Free, open-source, works with local AI. No subscriptions.</p>
+      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+        <a href="https://github.com/ankitpro/commently" class="btn-white" target="_blank" rel="noreferrer">
+          ⬇️ Install Commently
+        </a>
+        <a href="https://buymeacoffee.com/chillbaba" target="_blank" rel="noreferrer"
+           style="padding:14px 28px; background:#FFDD00; color:#000; border-radius:10px; font-size:15px; font-weight:700; display:inline-flex; align-items:center; gap:8px; transition:transform .2s, box-shadow .2s; text-decoration:none;"
+           onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(255,221,0,.5)'"
+           onmouseout="this.style.transform='';this.style.boxShadow=''">
+          📚 Buy us a dev book
+        </a>
+      </div>
+      <p style="margin-top:16px; font-size:14px; opacity:.8;">
+        Your support helps us learn, upgrade our skills, and ship better features for you.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">💬 Commently</div>
+      <p>Free, open-source AI comment generator for LinkedIn.
+         Built by <a href="https://agent-corex.com" target="_blank" rel="noreferrer" style="color:#94a3b8;">AgentCoreX</a>.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Docs</h4>
+      <ul>
+        <li><a href="docs/installation.html">Installation</a></li>
+        <li><a href="docs/configuration.html">Configuration</a></li>
+        <li><a href="docs/usage.html">Usage</a></li>
+        <li><a href="docs/tones.html">Tones</a></li>
+        <li><a href="docs/local-llm.html">Local LLM</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Project</h4>
+      <ul>
+        <li><a href="https://github.com/ankitpro/commently" target="_blank" rel="noreferrer">GitHub</a></li>
+        <li><a href="https://github.com/ankitpro/commently/issues" target="_blank" rel="noreferrer">Report a Bug</a></li>
+        <li><a href="docs/contributing.html">Contributing</a></li>
+        <li><a href="https://github.com/ankitpro/commently/blob/main/LICENSE" target="_blank" rel="noreferrer">License</a></li>
+        <li><a href="https://agent-corex.com" target="_blank" rel="noreferrer">AgentCoreX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 <a href="https://agent-corex.com" target="_blank" rel="noreferrer">AgentCoreX</a>. Non-commercial use only.</span>
+    <a href="https://buymeacoffee.com/chillbaba" target="_blank" rel="noreferrer"
+       style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; background:#FFDD00; color:#000; border-radius:20px; font-size:13px; font-weight:700; text-decoration:none;">
+      📚 Buy us a dev book
+    </a>
+    <span>Made with ❤️ for the LinkedIn community</span>
+  </div>
+</footer>
+
+<script>
+  function switchTab(id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'))
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'))
+    document.getElementById('tab-' + id).classList.add('active')
+    event.currentTarget.classList.add('active')
+  }
+</script>
+</body>
+</html>

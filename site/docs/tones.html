@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tones Reference — Commently Docs</title>
+  <meta name="description" content="All 24 tones" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    .docs-layout {
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      min-height: 100vh;
+      padding-top: var(--header-h);
+    }
+    .docs-sidebar {
+      position: sticky; top: var(--header-h);
+      height: calc(100vh - var(--header-h));
+      overflow-y: auto;
+      padding: 24px 16px;
+      border-right: 1px solid var(--border);
+      background: var(--bg-alt);
+    }
+    .docs-sidebar h4 {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--text-muted); margin: 20px 0 8px;
+    }
+    .docs-sidebar a {
+      display: block; padding: 6px 10px; font-size: 14px;
+      color: var(--text-muted); border-radius: 6px;
+    }
+    .docs-sidebar a:hover { color: var(--brand); background: var(--brand-light); text-decoration: none; }
+    .docs-sidebar a.active { color: var(--brand); background: var(--brand-light); font-weight: 600; }
+    .docs-content {
+      max-width: 760px; padding: 48px 48px 80px;
+    }
+    .docs-content h1 { font-size: 36px; font-weight: 800; margin-bottom: 16px; }
+    .docs-content h2 { font-size: 24px; font-weight: 700; margin: 40px 0 12px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .docs-content h3 { font-size: 18px; font-weight: 700; margin: 28px 0 10px; }
+    .docs-content h4 { font-size: 15px; font-weight: 700; margin: 20px 0 8px; }
+    .docs-content p { font-size: 15px; line-height: 1.8; margin-bottom: 14px; color: #374151; }
+    .docs-content ul, .docs-content ol { padding-left: 24px; margin-bottom: 14px; }
+    .docs-content li { font-size: 15px; line-height: 1.8; color: #374151; }
+    .docs-content table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+    .docs-content th { background: var(--bg-alt); padding: 10px 14px; text-align: left; font-weight: 600; border: 1px solid var(--border); }
+    .docs-content td { padding: 10px 14px; border: 1px solid var(--border); }
+    .docs-content blockquote { border-left: 4px solid var(--brand); padding: 12px 20px; background: var(--brand-light); border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 14px; }
+    .docs-content hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+    .docs-nav { display: flex; justify-content: space-between; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .docs-nav a { font-size: 14px; font-weight: 600; color: var(--brand); display: flex; align-items: center; gap: 6px; }
+    @media (max-width: 768px) {
+      .docs-layout { grid-template-columns: 1fr; }
+      .docs-sidebar { display: none; }
+      .docs-content { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="header-logo">
+    <img src="../favicon.png" alt="Commently" width="28" height="28" style="border-radius:6px;" />
+    <span>Commently</span>
+  </a>
+  <nav class="header-nav">
+    <a href="../index.html#features">Features</a>
+    <a href="../index.html#how-it-works">How It Works</a>
+    <a href="installation.html">Docs</a>
+    <a href="https://github.com/ankitpro/commently" target="_blank" rel="noreferrer">GitHub</a>
+    <a href="installation.html" class="header-cta">Get Started →</a>
+  </nav>
+</header>
+
+<div class="docs-layout">
+  <nav class="docs-sidebar">
+    <h4>Getting Started</h4>
+    <a href="index.html">Overview</a>
+    <a href="installation.html">Installation</a>
+    <a href="configuration.html">Configuration</a>
+    <a href="usage.html">Usage</a>
+
+    <h4>Features</h4>
+    <a href="tones.html">Tones</a>
+    <a href="local-llm.html">Local LLM</a>
+
+    <h4>Project</h4>
+    <a href="contributing.html">Contributing</a>
+    <a href="https://github.com/ankitpro/commently/blob/main/LICENSE" target="_blank" rel="noreferrer">License</a>
+    <a href="https://github.com/ankitpro/commently/issues" target="_blank" rel="noreferrer">Issues</a>
+
+    <h4 style="margin-top:32px;">Links</h4>
+    <a href="https://agent-corex.com" target="_blank" rel="noreferrer">⚡ AgentCoreX</a>
+    <a href="https://github.com/ankitpro/commently" target="_blank" rel="noreferrer">⭐ GitHub</a>
+
+    <a href="https://buymeacoffee.com/chillbaba" target="_blank" rel="noreferrer"
+       style="display:flex; align-items:center; gap:6px; margin-top:16px; padding:10px 12px; background:#FFDD00; color:#000 !important; border-radius:8px; font-size:13px; font-weight:700; text-align:center; justify-content:center;">
+      📚 Buy us a dev book
+    </a>
+    <p style="font-size:11px; color:var(--text-muted); margin-top:6px; line-height:1.4; padding:0 4px;">
+      Help us learn & ship more features for you
+    </p>
+  </nav>
+
+  <main class="docs-content" id="doc-body">
+    <h1>Tones Reference</h1>
+
+<p>Commently ships with <strong>24 preset tones</strong> and supports unlimited <strong>custom tones</strong>.</p>
+
+<p>Select a tone in the Settings page to set your default, or change it per-comment</p>
+<p>directly on the LinkedIn page.</p>
+
+<hr>
+
+<h2>Preset Tones</h2>
+
+<table><tr><th>Icon</th><th>Name</th><th>Description</th></tr><tr><td>👔</td><td><strong>Professional</strong></td><td>Formal and serious — ideal for professional environments</td></tr><tr><td>😊</td><td><strong>Casual</strong></td><td>Relaxed and conversational — friendly and approachable</td></tr><tr><td>✨</td><td><strong>Inspirational</strong></td><td>Uplifting and motivating — encourages and empowers</td></tr><tr><td>😂</td><td><strong>Humorous</strong></td><td>Light-hearted and witty — makes the reader smile</td></tr><tr><td>🤗</td><td><strong>Empathetic</strong></td><td>Compassionate and supportive — shows understanding</td></tr><tr><td>📚</td><td><strong>Informative</strong></td><td>Clear and educational — adds factual value</td></tr><tr><td>🧐</td><td><strong>Critical</strong></td><td>Thoughtful critique — constructive and respectful feedback</td></tr><tr><td>📊</td><td><strong>Analytical</strong></td><td>Logical and data-driven — clear reasoning and evidence</td></tr><tr><td>🎉</td><td><strong>Enthusiastic</strong></td><td>Energetic — conveys excitement and strong interest</td></tr><tr><td>🗣️</td><td><strong>Persuasive</strong></td><td>Compelling — aims to convince with strong arguments</td></tr><tr><td>💭</td><td><strong>Reflective</strong></td><td>Introspective — shares personal reflections or insights</td></tr><tr><td>🙂</td><td><strong>Friendly</strong></td><td>Warm and approachable — builds rapport with the reader</td></tr><tr><td>🌞</td><td><strong>Optimistic</strong></td><td>Positive — focuses on benefits and good outcomes</td></tr><tr><td>🌧️</td><td><strong>Pessimistic</strong></td><td>Cautious — highlights potential drawbacks or concerns</td></tr><tr><td>⚖️</td><td><strong>Neutral</strong></td><td>Impartial — presents information objectively without bias</td></tr><tr><td>🛡️</td><td><strong>Authoritative</strong></td><td>Confident — conveys expertise and commands respect</td></tr><tr><td>🤝</td><td><strong>Conciliatory</strong></td><td>Peace-making — eases tensions and finds common ground</td></tr><tr><td>❓</td><td><strong>Questioning</strong></td><td>Inquisitive — poses thoughtful questions to spark discussion</td></tr><tr><td>📖</td><td><strong>Narrative</strong></td><td>Storytelling — engages through brief anecdotes</td></tr><tr><td>👍</td><td><strong>Supportive</strong></td><td>Affirming — encourages and backs the original poster</td></tr><tr><td>🚧</td><td><strong>Cautious</strong></td><td>Measured — careful consideration, avoids definitive statements</td></tr><tr><td>🌟</td><td><strong>Visionary</strong></td><td>Imaginative — focuses on future possibilities</td></tr><tr><td>🤔</td><td><strong>Disagreement</strong></td><td>Respectful — presents a differing opinion constructively</td></tr><tr><td>✅</td><td><strong>Agreement</strong></td><td>Affirming — expresses concurrence with the original post</td></tr></table>
+<hr>
+
+<h2>Custom Tones</h2>
+
+<p>You can create your own tones in <strong>Settings → 🎭 Comment Tones → Create Custom Tone</strong>.</p>
+
+<h3>Fields</h3>
+
+<table><tr><th>Field</th><th>Required</th><th>Description</th></tr><tr><td>Icon</td><td>Yes</td><td>Emoji shown in the tone pill</td></tr><tr><td>Name</td><td>Yes</td><td>Displayed in the tone bar (max 30 chars)</td></tr><tr><td>Description</td><td>No</td><td>Tooltip shown on hover</td></tr><tr><td>Tone Instruction Prompt</td><td>Yes</td><td>Sent to the AI to shape the comment style</td></tr></table>
+<h3>Example Custom Tone</h3>
+
+<pre><code>Name: Thought Leader
+<p>Icon: 💡</p>
+<p>Description: Bold, forward-thinking style that challenges assumptions</p>
+<p>Prompt: Write in a bold, thought-leadership style that challenges</p>
+<p>        conventional thinking, offers a unique perspective, and invites</p>
+<p>        the reader to reflect or engage further.</p>
+<p></code></pre></p>
+
+<h3>Tips for Writing Prompts</h3>
+
+<ul><li>Be specific about the <strong>style</strong> ("use short punchy sentences")</li><li>Mention what to <strong>include</strong> ("always ask a question at the end")</li><li>Mention what to <strong>avoid</strong> ("don't use corporate jargon")</li><li>Keep prompts under 100 words</li></ul>
+<hr>
+
+<h2>How Tones Are Applied</h2>
+
+<p>The selected tone's prompt is appended to the AI's system instruction:</p>
+
+<pre><code>You are a LinkedIn comment writer. Output ONLY the comment text itself...
+<p>Tone instruction: [your tone prompt here]</p>
+<p></code></pre></p>
+
+<p>This means tones affect every comment generated — not just wording, but</p>
+<p>structure, vocabulary, and emotional register.</p>
+
+<hr>
+
+<h2>Managing Custom Tones</h2>
+
+<ul><li><strong>Edit</strong> a custom tone with the ✏️ button</li><li><strong>Delete</strong> a custom tone with the 🗑️ button</li><li>If you delete your active tone, it falls back to Professional</li><li>Custom tones sync across devices via Chrome's sync storage</li></ul><div class="docs-nav"><a href="usage.html">← Usage</a><a href="local-llm.html">Local LLM →</a></div>
+  </main>
+</div>
+
+<script>
+  // Mark active nav link
+  const current = location.pathname.split('/').pop()
+  document.querySelectorAll('.docs-sidebar a').forEach(a => {
+    if (a.getAttribute('href') === current) a.classList.add('active')
+  })
+</script>
+</body>
+</html>

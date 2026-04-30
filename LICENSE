@@ -1,0 +1,85 @@
+Commently Non-Commercial License
+Copyright (c) 2025 AgentCoreX (https://agent-corex.com)
+
+TERMS AND CONDITIONS
+
+1. DEFINITIONS
+
+   "Software" means the Commently Chrome extension, including all source code,
+   documentation, assets, and associated files in this repository.
+
+   "Commercial Use" means any use of the Software, in whole or in part, that is
+   primarily intended for or directed toward commercial advantage or monetary
+   compensation. This includes but is not limited to:
+     - Distributing or publishing the Software (or a derivative) on any browser
+       extension store and generating revenue through it (ads, in-app purchases,
+       subscriptions, or any other monetisation mechanism);
+     - Selling, licensing, or sublicensing the Software or any derivative work;
+     - Using the Software as part of a paid product or service;
+     - White-labelling or rebranding the Software for commercial distribution.
+
+   "Non-Commercial Use" means personal, educational, research, or open-source
+   use where no monetary compensation is received or expected.
+
+2. GRANT OF RIGHTS — NON-COMMERCIAL USE
+
+   Subject to the terms of this License, AgentCoreX grants you a worldwide,
+   royalty-free, non-exclusive license to:
+     a. Use, copy, and run the Software for Non-Commercial Use;
+     b. Modify the Software and create derivative works for Non-Commercial Use;
+     c. Distribute copies of the Software or derivative works, provided that:
+        - This License file is included unchanged in every copy;
+        - The original copyright notice and attribution to AgentCoreX are retained;
+        - The words "Powered by AgentCoreX — https://agent-corex.com" remain
+          visible in the extension popup and settings page.
+
+3. COMMERCIAL USE — PERMISSION REQUIRED
+
+   Commercial Use of the Software is NOT permitted under this License.
+
+   If you wish to use the Software for Commercial Use, you must obtain a separate
+   written commercial license from AgentCoreX before doing so.
+
+   To request a commercial license, contact:
+     Email : agentcorex26@gmail.com
+     Website: https://agent-corex.com
+
+   Unauthorised Commercial Use constitutes copyright infringement and may result
+   in legal action.
+
+4. CONTRIBUTIONS
+
+   By submitting a pull request, patch, or any other contribution to this
+   repository, you agree that:
+     a. Your contribution is your original work and you have the right to submit it;
+     b. You grant AgentCoreX a perpetual, worldwide, royalty-free, irrevocable
+        license to use, modify, and distribute your contribution under any license,
+        including future commercial licenses;
+     c. You retain copyright to your contribution but acknowledge AgentCoreX
+        retains copyright to the Software as a whole.
+
+5. ATTRIBUTION REQUIREMENT
+
+   Any permitted distribution of the Software or a derivative work must:
+     - Credit "Commently by AgentCoreX" prominently in the extension listing,
+       README, or about page;
+     - Include a visible link to https://agent-corex.com.
+
+6. DISCLAIMER OF WARRANTIES
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL
+   AGENTCOREX BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM
+   THE USE OF THE SOFTWARE.
+
+7. TERMINATION
+
+   This License is automatically terminated if you breach any of its terms.
+   Upon termination you must destroy all copies of the Software in your possession.
+
+---
+
+For commercial licensing inquiries: agentcorex26@gmail.com
+Project homepage: https://agent-corex.com
+Repository: https://github.com/ankitpro/commently
